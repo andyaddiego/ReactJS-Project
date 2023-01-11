@@ -1,0 +1,8 @@
+.text_footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: pink;
+    font-family: 'Montserrat', sans-serif;
+    color: grey;
+}

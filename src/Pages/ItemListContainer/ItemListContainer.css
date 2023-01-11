@@ -1,0 +1,29 @@
+.message_greeting_container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 30%;
+    height: 200px;
+    background-color: pink;
+    border-radius: 10px;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    font-family: 'Dancing Script', cursive;
+    color: grey;
+    font-size: 48px;
+}
+
+.itemListCards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1rem;
+    justify-content: center;
+    
+}
+
