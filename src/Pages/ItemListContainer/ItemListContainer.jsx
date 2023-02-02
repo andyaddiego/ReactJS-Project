@@ -22,7 +22,7 @@ const ItemListContainer = (props) => {
     })
   }, []);
   return (
-    <div className='itemListCards'>
+    <div className='cards_container'>
       <ItemList productList = {productList}/>
     </div>
 

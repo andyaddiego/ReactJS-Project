@@ -26,7 +26,6 @@ function App() {
             <Route path="/detail/:id" element={<ItemDetailContainer />} />
             <Route path="/category/:id" element={<ItemCategoryContainer />} />
           </Routes>
-          {/*<ItemListContainer name="Welcome to MakeÜp" />*/}
         </main>
         <footer>
           <Footer />

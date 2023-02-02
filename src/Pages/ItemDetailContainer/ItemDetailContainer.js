@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import { data } from "../../data/data";
 import ItemDetail from "../../Components/ItemDetail";
 import { useParams } from "react-router-dom";
+import ComponenteContador from "../../Components/componenteContador/ComponenteContador"
 
 const ItemDetailContainer = () => {
 
@@ -24,10 +25,10 @@ const ItemDetailContainer = () => {
   return (
     <div>
       { product && <ItemDetail product={product}/>}
+      <ComponenteContador/>
     </div>
   )
 }
 
 export default ItemDetailContainer
 
-//me va a mostrar el producto que elijo, es una ejercitacion de la clase de detalle del producto (no se si aplica al proyecto final)

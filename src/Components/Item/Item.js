@@ -5,8 +5,8 @@ const Item = ({product}) => {
   return (
     <div>
       <Link to={`/detail/${product.id}`}>
-      <img className='img_product'alt={product.name} src={product.image}/>
-      <div>
+      <img className='product_img'alt={product.name} src={product.image}/>
+      <div className='product_info'>
         <h2>{product.brand}</h2>
         <h2>{product.name}</h2>
         <h2>{product.type}</h2>
