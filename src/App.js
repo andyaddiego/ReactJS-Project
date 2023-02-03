@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./Components/NavBar/NavBar";
-import Footer from "./Components/Footer/Footer";
-import Main from "./Components/Main/Main";
-import ItemListContainer from "./Pages/ItemListContainer/ItemListContainer";
+import Cart from "./Pages/Cart/Cart";
 import ItemCategoryContainer from "./Pages/ItemCategoryContainer/ItemCategoryContainer";
 import ItemDetailContainer from "./Pages/ItemDetailContainer/ItemDetailContainer";
-import Cart from "./Pages/Cart/Cart";
+import ItemListContainer from "./Pages/ItemListContainer/ItemListContainer";
+import Footer from "./Components/Footer/Footer";
+import Main from "./Components/Main/Main";
+import NavBar from "./Components/NavBar/NavBar";
 import ShopProvider from "./Context/ShopProvider";
 import "./App.css";
 

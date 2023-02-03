@@ -1,15 +1,19 @@
-import "./ItemDetail.css";
-import Count from "./Count/Count";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom"
+import { Shop } from "../Context/ShopProvider";
+import Count from "./Count/Count";
+import "./ItemDetail.css";
 
 const ItemDetail = ({ product }) => {
 
   const [quantity, setQuantity] = useState(0)
 
+  const {addProduct} = useContext(Shop)
+
   const onAdd = (cantidad) => {
     console.log(`Productos agregados: ${cantidad}`)
     setQuantity(cantidad)
+    addProduct({...product, quantity: cantidad})
   }
 
   return (
@@ -37,5 +41,5 @@ const ItemDetail = ({ product }) => {
 };
 
 export default ItemDetail;
-//no se si es correcto ponerle el signo de pesos adelante, capaz luego jode la logica y si es correcto encajar ahi el contador
-//el stock tambien se puede poner como product.stock.
+//No se si es correcto ponerle el signo de pesos adelante, capaz luego jode la logica y si es correcto encajar ahi el contador
+//el stock tambien lo puedo poner como product.stock.

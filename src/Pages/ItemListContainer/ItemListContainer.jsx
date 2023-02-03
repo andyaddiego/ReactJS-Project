@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import { data } from '../../data/data';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import ItemList from '../../Components/ItemList/ItemList';
 import './ItemListContainer.css'
