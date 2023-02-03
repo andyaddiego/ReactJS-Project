@@ -2,7 +2,6 @@ import {useEffect, useState} from "react";
 import { data } from "../../data/data";
 import ItemDetail from "../../Components/ItemDetail";
 import { useParams } from "react-router-dom";
-import ComponenteContador from "../../Components/componenteContador/ComponenteContador"
 
 const ItemDetailContainer = () => {
 
@@ -25,10 +24,12 @@ const ItemDetailContainer = () => {
   return (
     <div>
       { product && <ItemDetail product={product}/>}
-      <ComponenteContador/>
     </div>
   )
 }
 
 export default ItemDetailContainer
 
+//para que muestre un mensaje de carga arriba de linea 28 podemos agregar:
+// vamos a usar ternary no if.. en jsx { Objects.keys(product).lenght === 0 ? h2Loadingh2 : <...}
+//al haber puesto entre llaves product && no puedo agregarle el loader con ternary...

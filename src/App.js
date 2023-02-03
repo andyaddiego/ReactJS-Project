@@ -8,6 +8,7 @@ import ItemCategoryContainer from "./Pages/ItemCategoryContainer/ItemCategoryCon
 import ItemDetailContainer from "./Pages/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Cart from "./Pages/Cart/Cart";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/detail/:id" element={<ItemDetailContainer />} />
             <Route path="/category/:id" element={<ItemCategoryContainer />} />
+            <Route path="/cart" element={<Cart/>}/>
           </Routes>
         </main>
         <footer>

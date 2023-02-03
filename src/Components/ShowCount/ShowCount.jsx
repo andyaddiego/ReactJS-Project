@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ComponenteMuestraConteo = ({contador}) => {
+const ShowCount = ({contador}) => {
   return (
     <div>
         <h1>{contador}</h1>
@@ -8,4 +8,4 @@ const ComponenteMuestraConteo = ({contador}) => {
   )
 }
 
-export default ComponenteMuestraConteo
+export default ShowCount
