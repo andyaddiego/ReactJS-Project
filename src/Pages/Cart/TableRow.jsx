@@ -11,7 +11,7 @@ const TableRow = ({product}) => {
         <td><img src={product.image} alt="table-row"/></td>
         <td>{product.name}</td>
         <td>{product.quantity}</td>
-        <td>${product.price}</td>
+        <td>${product.price * product.quantity}</td>
         <td><button onClick={() => removeProduct(product.id)}>Remove</button></td>
   </tr>
   )
