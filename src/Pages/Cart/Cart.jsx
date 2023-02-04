@@ -11,10 +11,10 @@ const Cart = () => {
         <thead>
           <tr>
             <td>ID</td>
-            <td>PRODUCTO</td>
-            <td>NOMBRE</td>
-            <td>CANTIDAD</td>
-            <td>PRECIO</td>
+            <td>PRODUCT</td>
+            <td>NAME</td>
+            <td>QUANTITY</td>
+            <td>PRICE</td>
             <td>REMOVE</td>
           </tr>
         </thead>
@@ -24,7 +24,7 @@ const Cart = () => {
               return <TableRow key={product.id} product={product} />;
             })
           ) : (
-            <p>Carrito vacío</p>
+            <p>Your cart is empty</p>
           )}
         </tbody>
       </table>

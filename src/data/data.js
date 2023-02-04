@@ -55,7 +55,7 @@ export const data = [
     },
 ]
 
-export const category = [
+/*export const category = [
     {
         id: 1,
         name: "EyeshadowPalette",
@@ -68,6 +68,6 @@ export const category = [
         id: 3,
         name: "CheekPalette",
     }
-]
+]*/
 //arreglo de objetos, cada objeto es un producto con sus propiedades
 //las marcas las puedo marcar con sus logos

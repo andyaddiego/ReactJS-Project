@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+/*import { useEffect, useState } from "react";
 import { data } from "../../data/data";
 import { useParams } from "react-router-dom";
 import ItemList from "../../Components/ItemList/ItemList";
@@ -25,4 +25,4 @@ const ItemCategoryContainer = () => {
   return <div>{category && <ItemList productList={category} />}</div>;
 };
 
-export default ItemCategoryContainer;
+export default ItemCategoryContainer;*/

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./Pages/Cart/Cart";
-import ItemCategoryContainer from "./Pages/ItemCategoryContainer/ItemCategoryContainer";
+//import ItemCategoryContainer from "./Pages/ItemCategoryContainer/ItemCategoryContainer";
 import ItemDetailContainer from "./Pages/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./Pages/ItemListContainer/ItemListContainer";
 import Footer from "./Components/Footer/Footer";
@@ -16,14 +16,13 @@ function App() {
         <BrowserRouter>
           <header>
             <NavBar />
-            {/*<ItemDetailContainer/>*/}
           </header>
           <main>
             <Main />
             <Routes>
               <Route path="/" element={<ItemListContainer />} />
               <Route path="/detail/:id" element={<ItemDetailContainer />} />
-              <Route path="/category/:id" element={<ItemCategoryContainer />} />
+              <Route path="/category/:categoryId" element={<ItemListContainer />} />
               <Route path="/cart" element={<Cart />}/>
             </Routes>
           </main>

@@ -4,7 +4,7 @@ import { Shop } from "../Context/ShopProvider";
 import Count from "./Count/Count";
 import "./ItemDetail.css";
 
-const ItemDetail = ({ product }) => {
+const ItemDetail = ({ detail }) => {
 
   const [quantity, setQuantity] = useState(0)
 
@@ -13,18 +13,18 @@ const ItemDetail = ({ product }) => {
   const onAdd = (cantidad) => {
     console.log(`Productos agregados: ${cantidad}`)
     setQuantity(cantidad)
-    addProduct({...product, quantity: cantidad})
+    addProduct({...detail, quantity: cantidad})
   }
 
   return (
     <div className="product_container">
-      <img className="product_img" alt={product.name} src={product.image} />
+      <img className="product_img" alt={detail.name} src={detail.image} />
       <div className="product_info">
-        <h1>{product.brand}</h1>
-        <h2>{product.name}</h2>
-        <h2>{product.type}</h2>
-        <h2>${product.price}</h2>
-        <p>{product.description}</p>
+        <h1>{detail.brand}</h1>
+        <h2>{detail.name}</h2>
+        <h2>{detail.type}</h2>
+        <h2>${detail.price}</h2>
+        <p>{detail.description}</p>
       </div>
       <div>
         {
