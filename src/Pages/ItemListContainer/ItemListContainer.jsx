@@ -1,4 +1,3 @@
-//import { data } from "../../data/data";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
@@ -6,6 +5,7 @@ import { db } from "../../Firebase/config";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import ItemList from "../../Components/ItemList/ItemList";
 import "./ItemListContainer.css";
+//import saveFromJSONToFirebase from "../../Services/saveFromJSONToFirebase";
 
 const ItemListContainer = (props) => {
   const [products, setProducts] = useState([]);
@@ -17,6 +17,13 @@ const ItemListContainer = (props) => {
       resolve(data);
     }, 2000);
   });*/
+
+//IMPORTANTE: para traer los items que tengo en JSON manual a firestore:
+//Lo uso una vez y lo comento para que no me repita los items cada vez que actualice.
+ /* useEffect(() => {
+    saveFromJSONToFirebase()
+  
+  }, [])*/
 
   useEffect(() => {
 
@@ -52,5 +59,5 @@ const ItemListContainer = (props) => {
 
 export default ItemListContainer;
 
-//VA A SER EL PADRE DE TODOS , el item list(flex) el hijo que son las cards y luego el item que es la card.
+//VA A SER EL PADRE DE TODOS , (CSS)el item list el hijo que son las cards y luego el item que es la card.
 //setTimeout simula una peticion a un servidor

@@ -44,8 +44,16 @@ const ShopProvider = ({children}) => {
         return products
     }
 
+    const total = () => {
+        let total = 0;
+        for (const product of products) {
+            total += product.price * product.quantity
+        } //REVISAR
+        return total;
+    }
+
     return (
-        <Shop.Provider value = {{products, addProduct, countCart, removeProduct, clearCart}}>
+        <Shop.Provider value = {{products, addProduct, countCart, removeProduct, clearCart, total}}>
             {children}
         </Shop.Provider>
     )

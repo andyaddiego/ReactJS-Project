@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "category": "EyeshadowPalette",
+        "brand": "NARS",
+        "description": "Sensual. Dimensional. Eyes tell all. Passion meets pleasure in a palette of 16 shadows in matte, shimmer, and glitter finishes. Featuring bestselling NARS favorites Laguna, Orgasm, and Taj Mahal, plus complementary shades in a range of matte neutrals, warm bronzes, and exotic pink tones. Intense pigments create a high-impact effect that lasts. Limited edition.",
+        "image": "/images/Nars/summerunrated.jpg",
+        "name": "Summer Unrated",
+        "price": 50,
+        "stock" : 10
+    }
+]

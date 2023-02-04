@@ -29,7 +29,7 @@ const ItemDetail = ({ detail }) => {
       <div>
         {
           quantity === 0 ?
-          <Count stock={10} initial={1} onAdd={onAdd}/>
+          <Count stock={detail.stock} initial={1} onAdd={onAdd}/>
           :
           <button>
             <Link to="/cart">Go Cart</Link>
