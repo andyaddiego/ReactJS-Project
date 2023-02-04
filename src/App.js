@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./Pages/Cart/Cart";
-//import ItemCategoryContainer from "./Pages/ItemCategoryContainer/ItemCategoryContainer";
 import ItemDetailContainer from "./Pages/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./Pages/ItemListContainer/ItemListContainer";
 import Footer from "./Components/Footer/Footer";
