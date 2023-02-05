@@ -13,5 +13,5 @@ const ItemList = ({productList}) => {
 
 export default ItemList
 
-//va a iterar el product list, va a mostrar un producto por cada producto de la lista, creo el template en ITEM
-//el key siempre lo tiene que tener el padre
+// Va a iterar el product list, va a mostrar un producto por cada producto de la lista, creo el template en ITEM.
+// El key siempre lo tiene que tener el padre.

@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Link } from 'react-router-dom';
 import { Shop } from "../../Context/ShopProvider";
 import generateOrderObject from "../../Services/generateOrderObject";
 import TableRow from "./TableRow";
@@ -6,7 +7,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../Firebase/config";
 import { doc, updateDoc } from "firebase/firestore";
 import FormComp from "../../Components/Form/Form";
-import { Link } from 'react-router-dom';
+import Swal from "sweetalert2";
 
 const Cart = () => {
   const { products, clearCart, total } = useContext(Shop);
@@ -43,7 +44,15 @@ const Cart = () => {
         });
       }
 
-      alert("Your order has been confirmed with ID: " + docRef.id);
+      Swal.fire({
+        title: 'Thank You!',
+        text: ("Your order has been confirmed with ID: " + docRef.id),
+        //imageUrl: '../../../public/images/highlightlogo.png',
+        imageWidth: 400,
+        imageHeight: 80,
+        confirmButtonColor: '#252525'
+      })
+    
     } catch (error) {
       console.log(error);
     } finally {
@@ -74,7 +83,7 @@ const Cart = () => {
             })}
           </tbody>
         </table>
-
+        <h2>Total ${total()}</h2>
         {
         loader ? 
         <h2>Loading your purchase</h2>

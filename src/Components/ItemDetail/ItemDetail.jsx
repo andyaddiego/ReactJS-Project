@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom"
-import { Shop } from "../Context/ShopProvider";
-import Count from "./Count/Count";
+import { Shop } from "../../Context/ShopProvider";
+import Count from "../Count/Count";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ detail }) => {

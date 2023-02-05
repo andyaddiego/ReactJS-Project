@@ -1,12 +1,12 @@
 import * as React from "react";
 import { useContext } from "react";
+import { Link } from 'react-router-dom'
 import { Shop } from "../../Context/ShopProvider";
 import "./CartWidget.css";
-import { Link } from 'react-router-dom'
-//El logo lo traje de librería, podría traerlo de mis assets '../../Assets/ejemplo.png'
+  // El logo lo traje de librería, podría traerlo de mis assets '../../Assets/ejemplo.png'
 
 function CartWidget(props) {
-  //Consumir el context para que me figure la cantidad de productos del carrito
+  // Consumir el context para que me figure la cantidad de productos del carrito
   const { countCart } = useContext(Shop);
 
   return (

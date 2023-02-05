@@ -1,7 +1,7 @@
 .cards_container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 400px); /*funcion repeat, primer parametro cantidad de columnas, tamaño 1fr*/
-    gap: 26px; /*es el espaciado entre las cards*/
+    grid-template-columns: repeat(auto-fill, 350px); /*funcion repeat, primer parametro cantidad de columnas, tamaño 1fr*/
+    gap: 30px; /*es el espaciado entre las cards*/
     place-content: center;
 }
 

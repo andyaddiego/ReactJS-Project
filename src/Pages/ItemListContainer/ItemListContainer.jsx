@@ -12,19 +12,14 @@ const ItemListContainer = (props) => {
 
   const {categoryId} = useParams()
 
-  /*const getProducts = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(data);
-    }, 2000);
-  });*/
 
-//IMPORTANTE: para traer los items que tengo en JSON manual a firestore:
-//Lo uso una vez y lo comento para que no me repita los items cada vez que actualice.
+  // IMPORTANTE: para traer los items que tengo en JSON manual a firestore:
+  // Lo uso una vez y lo comento para que no me repita los items cada vez que actualice.
  /* useEffect(() => {
     saveFromJSONToFirebase()
-  
   }, [])*/
 
+  // El useEffect se ejecuta cuando se monta el componente.
   useEffect(() => {
 
     const getProducts = async () => {
@@ -59,5 +54,4 @@ const ItemListContainer = (props) => {
 
 export default ItemListContainer;
 
-//VA A SER EL PADRE DE TODOS , (CSS)el item list el hijo que son las cards y luego el item que es la card.
-//setTimeout simula una peticion a un servidor
+// VA A SER EL PADRE DE TODOS , (CSS)el item list el hijo que son las cards y luego el item que es la card.

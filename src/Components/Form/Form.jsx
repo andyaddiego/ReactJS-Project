@@ -1,11 +1,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+//import Swal from "sweetalert2";
 
 const FormComp = ({confirmPurchase}) => {
     const {
         register,
         handleSubmit,
-        formState: { errors }
+        formState: { errors },
+        getValues
       } = useForm();
     
       const onSubmit = (formData) => {
@@ -14,7 +16,9 @@ const FormComp = ({confirmPurchase}) => {
 
 
       return (
-
+       // Swal.fire({
+       //   title: "Form",
+       //   html:
         <form onSubmit={handleSubmit(onSubmit)}>
           <label>Name</label>
           <input
@@ -29,9 +33,18 @@ const FormComp = ({confirmPurchase}) => {
           )}
           
           <label>Email</label>
-          <input type="email"{...register("email", { minLength: 10, required: true})} />
-          {errors?.email?.type === "minLength" && (
+          <input type="email" name="email1"{...register("email1", { minLength: 10, required: true})} />
+          {errors?.email1?.type === "minLength" && (
             <p>Email must exceed 10 characters</p>
+          )}
+          {errors?.email?.type === "required" && <p>This field is required</p>}
+
+          <label>Email Again</label>
+          <input type="email" name="email2"{...register("email2", { minLength: 10, required: true, 
+            validate: {equalMails: email2 => email2 === getValues().email1}})} />
+          
+          {errors?.email2?.type === "equalMails" && (
+            <p>You must enter the same email</p>
           )}
           {errors?.email?.type === "required" && <p>This field is required</p>}
 
@@ -41,11 +54,11 @@ const FormComp = ({confirmPurchase}) => {
             <p>The phone must have 10 digits</p>
           )}
           {errors?.phone?.type === "required" && <p>This field is required</p>}
-          <input type="submit" />
+          <input type="submit" value="Send" />
         </form>
+        //})
       );
 }
 
 export default FormComp;
 
-//https://react-hook-form.com/

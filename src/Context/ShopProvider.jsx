@@ -48,7 +48,7 @@ const ShopProvider = ({children}) => {
         let total = 0;
         for (const product of products) {
             total += product.price * product.quantity
-        } //REVISAR
+        } 
         return total;
     }
 
